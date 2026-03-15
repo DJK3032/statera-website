@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statera Solutions — Strategic Advisory for Defense Technology</title>
+<meta name="description" content="Statera Solutions partners with technology companies to navigate the federal defense and intelligence market — from strategy through execution.">
+<meta property="og:title" content="Statera Solutions — Strategic Advisory for Defense Technology">
+<meta property="og:description" content="Strategic advisory for technology companies entering and growing within the federal defense market.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://staterasolutions.us">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:wght@400&display=swap" rel="stylesheet">
+<style>
+/* ========== RESET & BASE ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0a0a0f;
+  color: #c8c8d0;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ========== DESIGN TOKENS ========== */
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #111118;
+  --bg-card: #16161f;
+  --bg-card-hover: #1c1c28;
+  --accent: #bf9525;
+  --accent-dim: rgba(191, 149, 37, 0.15);
+  --accent-glow: rgba(191, 149, 37, 0.08);
+  --text-primary: #eaeaf0;
+  --text-secondary: #9090a0;
+  --text-muted: #606070;
+  --border: rgba(255,255,255,0.06);
+  --border-hover: rgba(255,255,255,0.12);
+  --max-w: 1200px;
+  --nav-h: 96px;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: var(--nav-h);
+  background: rgba(10,10,15,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-inner {
+  width: 100%; max-width: var(--max-w);
+  padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.logo {
+  display: flex; align-items: center;
+}
+.logo-img {
+  height: 72px;
+  width: auto;
+}
+.nav-links { display: flex; align-items: center; gap: 36px; }
+.nav-links a {
+  font-size: 14px; font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  transition: color 0.25s;
+  position: relative;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+.nav-links a.active::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+  height: 2px; background: var(--accent); border-radius: 1px;
+}
+.nav-cta {
+  padding: 10px 24px;
+  background: var(--accent);
+  color: #fff !important;
+  border-radius: 6px;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.03em;
+  transition: all 0.3s;
+}
+.nav-cta:hover { background: #a6811e; transform: translateY(-1px); }
+
+/* ========== HERO ========== */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
+  padding: calc(var(--nav-h) + 60px) 40px 80px;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -200px; right: -200px;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: -100px; left: -100px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(191,149,37,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: var(--max-w); width: 100%;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: center;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(191,149,37,0.2);
+  border-radius: 20px;
+  font-size: 12px; font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.hero-tag::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(44px, 5.5vw, 66px);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(135deg, var(--accent), #d4a832);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 32px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 15px; font-weight: 600;
+  transition: all 0.3s;
+  border: none; cursor: pointer;
+}
+.btn-primary:hover { background: #a6811e; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(191,149,37,0.25); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-hover);
+  border-radius: 8px;
+  font-size: 15px; font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Hero right — metric cards */
+.hero-visual {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.metric-card {
+  padding: 32px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.4s;
+}
+.metric-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+}
+.metric-card:first-child { grid-column: span 2; }
+.metric-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 42px; font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.metric-label {
+  font-size: 13px; font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ========== TRUST BAR ========== */
+.trust-bar {
+  padding: 60px 40px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.trust-inner {
+  max-width: var(--max-w); margin: 0 auto;
+  text-align: center;
+}
+.trust-label {
+  font-size: 11px; font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.trust-items {
+  display: flex; align-items: center; justify-content: center;
+  gap: 60px; flex-wrap: wrap;
+}
+.trust-item {
+  font-size: 14px; font-weight: 500;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  display: flex; align-items: center; gap: 10px;
+}
+.trust-dot {
+  width: 8px; height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+/* ========== SECTIONS (Generic) ========== */
+.section {
+  padding: 120px 40px;
+  position: relative;
+}
+.section-inner {
+  max-width: var(--max-w); margin: 0 auto;
+}
+.section-label {
+  font-size: 11px; font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(34px, 4.5vw, 48px);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+.section-subtitle {
+  font-size: 17px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.7;
+  margin-bottom: 60px;
+}
+
+/* ========== SERVICES PREVIEW ========== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.service-card {
+  padding: 44px 36px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #d4a832);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+.service-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+  transform: translateY(-6px);
+}
+.service-card:hover::before { opacity: 1; }
+.service-icon {
+  width: 48px; height: 48px;
+  background: var(--accent-dim);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 28px;
+  font-size: 22px;
+}
+.service-card h3 {
+  font-size: 20px; font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+.service-card p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.service-link {
+  font-size: 13px; font-weight: 600;
+  color: var(--accent);
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: gap 0.3s;
+}
+.service-link:hover { gap: 10px; }
+
+/* ========== WHY STATERA ========== */
+.why-section { background: var(--bg-secondary); }
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.why-list { display: flex; flex-direction: column; gap: 32px; }
+.why-item {
+  display: flex; gap: 20px;
+  padding: 24px;
+  border-radius: 12px;
+  transition: background 0.3s;
+}
+.why-item:hover { background: var(--bg-card); }
+.why-num {
+  width: 40px; height: 40px;
+  min-width: 40px;
+  background: var(--accent-dim);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; font-weight: 700;
+  color: var(--accent);
+}
+.why-item h4 {
+  font-size: 17px; font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.why-item p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ========== CTA BANNER ========== */
+.cta-banner {
+  padding: 100px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-banner::before {
+  content: '';
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px; height: 400px;
+  background: radial-gradient(ellipse, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-banner h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  position: relative;
+}
+.cta-banner p {
+  font-size: 17px;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+  max-width: 500px;
+  margin-left: auto; margin-right: auto;
+  position: relative;
+}
+.cta-banner .btn-primary { position: relative; }
+
+/* ========== FOOTER ========== */
+footer {
+  padding: 60px 40px 40px;
+  border-top: 1px solid var(--border);
+}
+.footer-inner {
+  max-width: var(--max-w); margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px;
+}
+.footer-brand .logo { margin-bottom: 16px; }
+.footer-brand p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 280px;
+}
+.footer-col h5 {
+  font-size: 12px; font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-col a {
+  display: block;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  transition: color 0.25s;
+}
+.footer-col a:hover { color: var(--text-primary); }
+.footer-bottom {
+  max-width: var(--max-w); margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; color: var(--text-muted);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 50px; }
+  .hero-visual { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-inner { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 600px) {
+  .nav-inner { padding: 0 20px; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .hero { padding: calc(var(--nav-h) + 40px) 20px 60px; }
+  .section { padding: 80px 20px; }
+  .hero-visual { grid-template-columns: 1fr; }
+  .metric-card:first-child { grid-column: span 1; }
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <img src="logo-dark.svg" alt="Statera Solutions" class="logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">Defense & Technology Advisory</div>
+      <h1>Navigate the Federal Market with <em>Confidence</em></h1>
+      <p>Statera Solutions partners with technology companies at all phases of growth to bridge the gap between commercial innovation and federal adoption — from strategy through execution.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">Start a Conversation →</a>
+        <a href="services.html" class="btn-secondary">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="metric-card" style="grid-column: span 2;">
+        <div class="metric-number">20+</div>
+        <div class="metric-label">Years of combined experience across defense, intelligence & technology</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">DoD</div>
+        <div class="metric-label">Deep domain expertise in defense systems</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-number">IC</div>
+        <div class="metric-label">Intelligence community integration</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST BAR ===== -->
+<section class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-label">Domains We Operate In</div>
+    <div class="trust-items">
+      <span class="trust-item"><span class="trust-dot"></span>Department of Defense</span>
+      <span class="trust-item"><span class="trust-dot"></span>Intelligence Community</span>
+      <span class="trust-item"><span class="trust-dot"></span>Federal Civilian Agencies</span>
+      <span class="trust-item"><span class="trust-dot"></span>Defense Industrial Base</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES PREVIEW ===== -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">What We Do</div>
+    <div class="section-title">Advisory Services Built for<br>the Defense Technology Landscape</div>
+    <div class="section-subtitle">We bring operational insight and strategic clarity to technology companies working at the intersection of innovation and national security.</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🚀</div>
+        <h3>Startup Advisory</h3>
+        <p>Equipping emerging technology companies with the strategy, connections, and market intelligence needed to break into and grow within the federal sector.</p>
+        <a href="services.html" class="service-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Defense Technology Consulting</h3>
+        <p>Guiding technology companies through the nuances of federal procurement, compliance, and operational deployment within defense environments.</p>
+        <a href="services.html" class="service-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3>Systems Integration</h3>
+        <p>Coordinating the right technical talent to unify disparate platforms into cohesive, interoperable systems — reducing friction and accelerating mission delivery.</p>
+        <a href="services.html" class="service-link">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY STATERA ===== -->
+<section class="section why-section">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div>
+        <div class="section-label">Why Statera</div>
+        <div class="section-title">Built on Operational Experience, Not Theory</div>
+        <p style="font-size:16px; color: var(--text-secondary); line-height:1.8; margin-top: 16px;">
+          Our advisory approach is grounded in years of hands-on work across the defense and intelligence communities. We don't just advise — we've built, integrated, and delivered within these environments.
+        </p>
+      </div>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="why-num">01</div>
+          <div>
+            <h4>Operator Perspective</h4>
+            <p>Our team has served in roles across DoD and the IC — we understand the mission from the inside out.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">02</div>
+          <div>
+            <h4>Startup-Fluent</h4>
+            <p>We speak both languages — the fast-moving world of tech innovation and the structured environment of federal procurement.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">03</div>
+          <div>
+            <h4>Outcome-Driven</h4>
+            <p>Engagements are scoped around tangible milestones — not billable hours. We succeed when you do.</p>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-num">04</div>
+          <div>
+            <h4>Trusted Network</h4>
+            <p>Access to a curated network of decision-makers, integrators, and operators across the defense ecosystem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-banner">
+  <h2>Ready to Accelerate Your Federal Strategy?</h2>
+  <p>Whether you're entering the defense market or scaling an existing presence, we'd like to hear from you.</p>
+  <a href="contact.html" class="btn-primary">Schedule a Conversation →</a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">
+        <img src="logo-dark.svg" alt="Statera Solutions" class="logo-img">
+      </div>
+      <p>Strategic advisory at the intersection of technology and national security.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <a href="services.html">Startup Advisory</a>
+      <a href="services.html">Defense Tech Consulting</a>
+      <a href="services.html">Systems Integration</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/company/statera-solutions" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <a href="mailto:info@staterasolutions.us">info@staterasolutions.us</a>
+      <a>Alexandria, Virginia</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Statera Solutions LLC. All rights reserved.</span>
+    <span>Privacy Policy &nbsp;&middot;&nbsp; Terms of Service</span>
+  </div>
+</footer>
+
+</body>
+</html>

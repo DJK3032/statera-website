@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services — Statera Solutions</title>
+<meta name="description" content="Systems integration, defense technology consulting, and startup advisory services for companies navigating the federal market.">
+<meta property="og:title" content="Services — Statera Solutions">
+<meta property="og:description" content="Practical, senior-level guidance for technology companies in the defense and intelligence market.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:wght@400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:#0a0a0f; color:#c8c8d0; line-height:1.7; overflow-x:hidden; }
+a { color:inherit; text-decoration:none; }
+:root {
+  --bg-primary:#0a0a0f; --bg-secondary:#111118; --bg-card:#16161f;
+  --bg-card-hover:#1c1c28; --accent:#bf9525;
+  --accent-dim:rgba(191,149,37,0.15); --accent-glow:rgba(191,149,37,0.08);
+  --text-primary:#eaeaf0; --text-secondary:#9090a0; --text-muted:#606070;
+  --border:rgba(255,255,255,0.06); --border-hover:rgba(255,255,255,0.12);
+  --max-w:1200px; --nav-h:96px;
+}
+
+nav { position:fixed; top:0; left:0; right:0; z-index:1000; height:var(--nav-h); background:rgba(10,10,15,0.85); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:center; }
+.nav-inner { width:100%; max-width:var(--max-w); padding:0 40px; display:flex; align-items:center; justify-content:space-between; }
+.logo { display:flex; align-items:center; }
+.logo-img { height:72px; width:auto;  }
+.nav-links { display:flex; align-items:center; gap:36px; }
+.nav-links a { font-size:14px; font-weight:500; color:var(--text-secondary); letter-spacing:0.02em; transition:color 0.25s; position:relative; }
+.nav-links a:hover, .nav-links a.active { color:var(--text-primary); }
+.nav-links a.active::after { content:''; position:absolute; bottom:-4px; left:0; right:0; height:2px; background:var(--accent); border-radius:1px; }
+.nav-cta { padding:10px 24px; background:var(--accent); color:#fff !important; border-radius:6px; font-size:13px; font-weight:600; letter-spacing:0.03em; transition:all 0.3s; }
+.nav-cta:hover { background:#a6811e; transform:translateY(-1px); }
+
+.page-hero { padding:calc(var(--nav-h) + 80px) 40px 80px; text-align:center; position:relative; overflow:hidden; }
+.page-hero::before { content:''; position:absolute; top:-100px; left:50%; transform:translateX(-50%); width:600px; height:400px; background:radial-gradient(circle, var(--accent-glow) 0%, transparent 70%); pointer-events:none; }
+.page-hero .section-label { font-size:11px; font-weight:700; color:var(--accent); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px; }
+.page-hero h1 { font-family:'DM Serif Display',serif; font-size:clamp(36px,4.5vw,52px); font-weight:400; color:var(--text-primary); line-height:1.2; letter-spacing:-0.02em; margin-bottom:20px; position:relative; }
+.page-hero p { font-size:18px; color:var(--text-secondary); max-width:640px; margin:0 auto; line-height:1.8; position:relative; }
+
+.section { padding:100px 40px; }
+.section-inner { max-width:var(--max-w); margin:0 auto; }
+.section-dark { background:var(--bg-secondary); }
+
+/* SERVICE DEEP DIVE */
+.service-block {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  align-items: start; padding: 80px 0;
+  border-bottom: 1px solid var(--border);
+}
+.service-block:last-child { border-bottom: none; }
+.service-block.reverse { direction: rtl; }
+.service-block.reverse > * { direction: ltr; }
+
+.service-header {
+  position: sticky; top: calc(var(--nav-h) + 40px);
+}
+.service-num {
+  font-family:'DM Serif Display',serif;
+  font-size: 64px; font-weight: 400;
+  color: rgba(191,149,37,0.12);
+  line-height: 1; margin-bottom: 16px;
+}
+.service-header h2 {
+  font-family:'DM Serif Display',serif;
+  font-size: 32px; font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25; margin-bottom: 16px;
+}
+.service-header .tagline {
+  font-size: 16px; color: var(--accent);
+  font-weight: 500; margin-bottom: 24px;
+}
+.service-header p {
+  font-size: 16px; color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.service-details { display: flex; flex-direction: column; gap: 20px; }
+.detail-card {
+  padding: 28px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+.detail-card:hover {
+  border-color: var(--border-hover);
+  background: var(--bg-card-hover);
+}
+.detail-card h4 {
+  font-size: 15px; font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  display: flex; align-items: center; gap: 10px;
+}
+.detail-card h4::before {
+  content: '';
+  width: 6px; height: 6px; min-width: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.detail-card p {
+  font-size: 14px; color: var(--text-secondary);
+  line-height: 1.7; padding-left: 16px;
+}
+
+/* ENGAGEMENT MODEL */
+.engage-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  margin-top: 60px;
+}
+.engage-card {
+  padding: 36px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-align: center;
+  transition: all 0.4s;
+}
+.engage-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+.engage-icon {
+  width: 52px; height: 52px;
+  background: var(--accent-dim);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px; font-size: 24px;
+}
+.engage-card h3 {
+  font-size: 18px; font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+.engage-card p {
+  font-size: 14px; color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* CTA */
+.cta-banner { padding:100px 40px; text-align:center; position:relative; overflow:hidden; }
+.cta-banner::before { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:800px; height:400px; background:radial-gradient(ellipse, var(--accent-glow) 0%, transparent 70%); pointer-events:none; }
+.cta-banner h2 { font-family:'DM Serif Display',serif; font-size:clamp(28px,3.5vw,40px); font-weight:400; color:var(--text-primary); margin-bottom:16px; position:relative; }
+.cta-banner p { font-size:17px; color:var(--text-secondary); margin-bottom:36px; max-width:500px; margin-left:auto; margin-right:auto; position:relative; }
+.btn-primary { display:inline-flex; align-items:center; gap:8px; padding:14px 32px; background:var(--accent); color:#fff; border-radius:8px; font-size:15px; font-weight:600; transition:all 0.3s; border:none; cursor:pointer; position:relative; }
+.btn-primary:hover { background:#a6811e; transform:translateY(-2px); box-shadow:0 8px 30px rgba(191,149,37,0.25); }
+
+footer { padding:60px 40px 40px; border-top:1px solid var(--border); }
+.footer-inner { max-width:var(--max-w); margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; }
+.footer-brand .logo { margin-bottom:16px; }
+.footer-brand p { font-size:14px; color:var(--text-muted); line-height:1.7; max-width:280px; }
+.footer-col h5 { font-size:12px; font-weight:700; color:var(--text-secondary); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:20px; }
+.footer-col a { display:block; font-size:14px; color:var(--text-muted); margin-bottom:12px; transition:color 0.25s; }
+.footer-col a:hover { color:var(--text-primary); }
+.footer-bottom { max-width:var(--max-w); margin:40px auto 0; padding-top:24px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--text-muted); }
+
+@media (max-width:900px) {
+  .service-block, .service-block.reverse { grid-template-columns:1fr; gap:40px; direction:ltr; }
+  .service-header { position:static; }
+  .engage-grid { grid-template-columns:1fr; }
+  .footer-inner { grid-template-columns:1fr 1fr; gap:40px; }
+}
+@media (max-width:600px) {
+  .nav-inner { padding:0 20px; }
+  .nav-links a:not(.nav-cta) { display:none; }
+  .page-hero, .section { padding-left:20px; padding-right:20px; }
+  .footer-inner { grid-template-columns:1fr; gap:32px; }
+  .footer-bottom { flex-direction:column; gap:12px; text-align:center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="logo-dark.svg" alt="Statera Solutions" class="logo-img"></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="contact.html" class="nav-cta">Get in Touch</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="section-label">Our Services</div>
+  <h1>Advisory That Moves the Needle</h1>
+  <p>Practical, senior-level guidance for technology companies navigating the federal defense and intelligence market.</p>
+</section>
+
+<!-- SERVICE 1: Startup Advisory -->
+<section class="section">
+  <div class="section-inner">
+    <div class="service-block">
+      <div class="service-header">
+        <div class="service-num">01</div>
+        <h2>Startup Advisory</h2>
+        <div class="tagline">From product-market fit to government-market fit.</div>
+        <p>Building a great product is only half the challenge. For startups targeting the federal space, the other half is understanding how government buys, what it values, and how to position your company as a credible partner — not just another vendor.</p>
+      </div>
+      <div class="service-details">
+        <div class="detail-card">
+          <h4>Go-to-Market Strategy</h4>
+          <p>Develop a phased federal market entry plan — identifying target agencies, procurement vehicles, and initial beachhead opportunities that build credibility.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Pitch & Positioning</h4>
+          <p>Translate your commercial value proposition into the language of federal requirements. Help you tell a story that resonates with government buyers and evaluators.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Partnership & Teaming</h4>
+          <p>Identify and facilitate introductions to prime contractors, system integrators, and channel partners who can accelerate your path to contract.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Growth Planning</h4>
+          <p>Scale intelligently — from first pilot to multi-agency presence. We help you build the internal capabilities, processes, and relationships needed for sustainable federal revenue.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICE 2: Defense Tech Consulting -->
+    <div class="service-block reverse">
+      <div class="service-header">
+        <div class="service-num">02</div>
+        <h2>Defense Technology Consulting</h2>
+        <div class="tagline">Your guide to the federal landscape.</div>
+        <p>The defense market has its own rules, its own language, and its own pace. We help companies understand the terrain — from procurement vehicles and compliance frameworks to the unwritten norms that determine whether a technology gets adopted or shelved.</p>
+      </div>
+      <div class="service-details">
+        <div class="detail-card">
+          <h4>Market Landscape Analysis</h4>
+          <p>Map the competitive environment, identify whitespace opportunities, and understand where your solution fits within the existing ecosystem of programs and contracts.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Procurement Navigation</h4>
+          <p>Demystify SBIR/STTR, OTAs, GWACs, and other vehicles — helping you choose the right path to get your technology in front of the right buyers.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Compliance Readiness</h4>
+          <p>Understand the compliance landscape — from FedRAMP to security certifications — and develop a practical path toward meeting the requirements that matter for your target contracts.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Stakeholder Engagement</h4>
+          <p>Build relationships with the program managers, end users, and decision-makers who matter — through targeted engagement strategies grounded in understanding of the customer's priorities.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICE 3: Systems Integration -->
+    <div class="service-block">
+      <div class="service-header">
+        <div class="service-num">03</div>
+        <h2>Systems Integration</h2>
+        <div class="tagline">The right team for the technical challenge.</div>
+        <p>Federal environments run on a patchwork of legacy and modern systems. We manage integration efforts by assembling and coordinating the right technical specialists — ensuring solutions work within the constraints of real-world government IT while keeping projects on track and on mission.</p>
+      </div>
+      <div class="service-details">
+        <div class="detail-card">
+          <h4>Requirements & Architecture Planning</h4>
+          <p>Work with your team and ours to assess existing system landscapes, define integration requirements, and develop an architecture that aligns with agency modernization priorities.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Technical Team Coordination</h4>
+          <p>Assemble and manage the right engineering talent for the specific integration challenge — whether that's bridging legacy infrastructure, API development, or data migration.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Technical Positioning</h4>
+          <p>Help your team articulate integration capabilities in the language of federal acquisitions — aligning technical strengths with program requirements.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Deployment Oversight</h4>
+          <p>Manage the transition from proof-of-concept to production — coordinating across security frameworks, stakeholder reviews, and operational readiness milestones.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENT MODEL -->
+<section class="section section-dark">
+  <div class="section-inner" style="text-align:center;">
+    <div style="font-size:11px; font-weight:700; color:var(--accent); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px;">How We Engage</div>
+    <h2 style="font-family:'DM Serif Display',serif; font-size:clamp(32px,4vw,40px); font-weight:400; color:var(--text-primary); margin-bottom:16px;">Flexible Models, Tangible Outcomes</h2>
+    <p style="font-size:16px; color:var(--text-secondary); max-width:560px; margin:0 auto;">We structure engagements around your needs — not ours. Every model is built to deliver measurable progress.</p>
+    <div class="engage-grid">
+      <div class="engage-card">
+        <div class="engage-icon">📋</div>
+        <h3>Strategic Assessment</h3>
+        <p>A focused, time-bound evaluation of your federal market position, competitive landscape, and recommended next steps. Delivered as a written roadmap.</p>
+      </div>
+      <div class="engage-card">
+        <div class="engage-icon">🔄</div>
+        <h3>Ongoing Advisory</h3>
+        <p>Embedded strategic support on a recurring basis — regular touchpoints, real-time guidance, and active support on pursuits and positioning.</p>
+      </div>
+      <div class="engage-card">
+        <div class="engage-icon">🎯</div>
+        <h3>Project-Based</h3>
+        <p>Defined scope, defined deliverables. Ideal for specific objectives like market entry plans, compliance readiness, or competitive analyses.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Let's Scope Your Engagement</h2>
+  <p>Tell us where you are and where you want to go. We'll design an approach that fits.</p>
+  <a href="contact.html" class="btn-primary">Start a Conversation →</a>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo"><img src="logo-dark.svg" alt="Statera Solutions" class="logo-img"></div>
+      <p>Strategic advisory at the intersection of technology and national security.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <a href="services.html">Startup Advisory</a>
+      <a href="services.html">Defense Tech Consulting</a>
+      <a href="services.html">Systems Integration</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.linkedin.com/company/statera-solutions" target="_blank">LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <a href="mailto:info@staterasolutions.us">info@staterasolutions.us</a>
+      <a>Alexandria, Virginia</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Statera Solutions LLC. All rights reserved.</span>
+    <span>Privacy Policy &middot; Terms of Service</span>
+  </div>
+</footer>
+
+</body>
+</html>
