@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services — Statera Solutions</title>
-<meta name="description" content="Systems integration, defense technology consulting, and startup advisory services for companies navigating the federal market.">
-<meta property="og:title" content="Services — Statera Solutions">
-<meta property="og:description" content="Practical, senior-level guidance for technology companies in the defense and intelligence market.">
+<title>Services | Statera Solutions</title>
+<meta name="description" content="The Founder's Operating Spine: a fixed-term build of finance, people, planning and compliance for technical founders. Plus federal market entry for commercial companies.">
+<meta property="og:title" content="Services | Statera Solutions">
+<meta property="og:description" content="The Founder's Operating Spine: a fixed-term build of finance, people, planning and compliance for technical founders. Plus federal market entry for commercial companies.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:wght@400&display=swap" rel="stylesheet">
@@ -172,6 +172,28 @@ footer { padding:60px 40px 40px; border-top:1px solid var(--border); }
   .footer-inner { grid-template-columns:1fr; gap:32px; }
   .footer-bottom { flex-direction:column; gap:12px; text-align:center; }
 }
+
+/* ===== 2026-10 refresh ===== */
+.services-grid.two { grid-template-columns: repeat(2, 1fr); }
+.svc-num { font-family:'DM Serif Display',serif; font-size:30px; color:var(--accent); margin-bottom:18px; line-height:1; }
+.cred-line { font-size:14px; color:var(--text-muted); margin-top:-12px; margin-bottom:36px; max-width:540px; line-height:1.7; }
+.metric-number.sm { font-size:34px; }
+.phase-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:28px; }
+.phase { padding:28px; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; }
+.phase .k { font-size:11px; font-weight:700; color:var(--accent); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:10px; }
+.phase h4 { font-size:17px; font-weight:600; color:var(--text-primary); margin-bottom:8px; }
+.phase p { font-size:14px; color:var(--text-secondary); line-height:1.7; }
+.service-header p + p { margin-top:14px; }
+.note { font-size:15px; color:var(--text-secondary); margin-top:24px; }
+.bio p { font-size:16px; color:var(--text-secondary); line-height:1.85; margin-bottom:18px; }
+.cred-list { list-style:none; display:flex; flex-direction:column; gap:14px; }
+.cred-list li { padding:18px 22px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px; font-size:14px; color:var(--text-secondary); line-height:1.6; }
+.cred-list li b { display:block; color:var(--text-primary); font-weight:600; font-size:15px; margin-bottom:2px; }
+.method-icon svg { width:20px; height:20px; stroke:var(--accent); fill:none; stroke-width:1.6; }
+.fed-ids { font-size:12px; color:var(--text-muted); letter-spacing:0.04em; }
+@media (max-width: 900px) {
+  .services-grid.two, .phase-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -181,157 +203,118 @@ footer { padding:60px 40px 40px; border-top:1px solid var(--border); }
     <a href="index.html" class="logo"><img src="logo-dark.svg" alt="Statera Solutions" class="logo-img"></a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
       <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
       <a href="contact.html" class="nav-cta">Get in Touch</a>
     </div>
   </div>
 </nav>
 
 <section class="page-hero">
-  <div class="section-label">Our Services</div>
-  <h1>Advisory That Moves the Needle</h1>
-  <p>Practical, senior-level guidance for technology companies navigating the federal defense and intelligence market.</p>
+  <div class="section-label">Services</div>
+  <h1>Built to Hand Off</h1>
+  <p>Two fixed-scope engagements. Each one ends with systems and people your company owns.</p>
 </section>
 
-<!-- SERVICE 1: Startup Advisory -->
-<section class="section">
+<section class="section" id="spine">
   <div class="section-inner">
     <div class="service-block">
       <div class="service-header">
         <div class="service-num">01</div>
-        <h2>Startup Advisory</h2>
-        <div class="tagline">From product-market fit to government-market fit.</div>
-        <p>Building a great product is only half the challenge. For startups targeting the federal space, the other half is understanding how government buys, what it values, and how to position your company as a credible partner — not just another vendor.</p>
+        <h2>Founder's Operating Spine</h2>
+        <div class="tagline">I take technical founders from product to company.</div>
+        <p>For seed to Series A companies with a technical founder, real traction and money in the bank, but no operator. The tell: the team ships product but misses deadlines, can't hire cleanly, has no financial rhythm, and the founder is drowning in work that isn't the product. Especially strong for defense and government-adjacent startups.</p>
+        <p>A week-one diagnostic decides which three or four of the six systems matter most for your company.</p>
       </div>
       <div class="service-details">
         <div class="detail-card">
-          <h4>Go-to-Market Strategy</h4>
-          <p>Develop a phased federal market entry plan — identifying target agencies, procurement vehicles, and initial beachhead opportunities that build credibility.</p>
+          <h4>Finance and Cash</h4>
+          <p>Outsourced accounting stood up fast on DCAA-compliant systems from day one, plus the model, budget, burn and runway tracking, and the monthly close.</p>
         </div>
         <div class="detail-card">
-          <h4>Pitch & Positioning</h4>
-          <p>Translate your commercial value proposition into the language of federal requirements. Help you tell a story that resonates with government buyers and evaluators.</p>
+          <h4>People</h4>
+          <p>A real PEO chosen to scale to 30 to 40 people without a painful migration, plus the org plan, role scorecards, repeatable recruiting and onboarding, and comp bands.</p>
         </div>
         <div class="detail-card">
-          <h4>Partnership & Teaming</h4>
-          <p>Identify and facilitate introductions to prime contractors, system integrators, and channel partners who can accelerate your path to contract.</p>
+          <h4>Rhythm and Planning</h4>
+          <p>The operating cadence, goals, and the weekly and monthly meetings that actually run the company.</p>
         </div>
         <div class="detail-card">
-          <h4>Growth Planning</h4>
-          <p>Scale intelligently — from first pilot to multi-agency presence. We help you build the internal capabilities, processes, and relationships needed for sustainable federal revenue.</p>
+          <h4>Legal and Compliance</h4>
+          <p>Corporate housekeeping, contracts, and the facility clearance process started early when a DD 254 is active or likely.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Tools and Data</h4>
+          <p>Systems of record, so the company isn't run out of one person's head and a spreadsheet.</p>
+        </div>
+        <div class="detail-card">
+          <h4>Go-to-Market or Delivery</h4>
+          <p>The repeatable back end to sell and deliver, depending on the company.</p>
         </div>
       </div>
     </div>
+    <div class="phase-grid">
+      <div class="phase"><div class="k">Month one</div><h4>Diagnose</h4><p>Find what is broken and decide which systems matter most.</p></div>
+      <div class="phase"><div class="k">Months two to four</div><h4>Build</h4><p>Stand up the two or three systems that carry the company.</p></div>
+      <div class="phase"><div class="k">Final phase</div><h4>Hand off</h4><p>Hire and train the junior operator and transfer everything. The handoff is the deliverable.</p></div>
+    </div>
+    <p class="note"><b style="color:var(--text-primary)">Terms:</b> fixed fee, scoped per engagement, paid monthly across a three to six month term. The comparison is a full-time COO you can't yet afford or find. This costs a fraction of that and leaves a trained operator in the seat.</p>
+  </div>
+</section>
 
-    <!-- SERVICE 2: Defense Tech Consulting -->
+<section class="section section-dark" id="federal">
+  <div class="section-inner">
     <div class="service-block reverse">
       <div class="service-header">
         <div class="service-num">02</div>
-        <h2>Defense Technology Consulting</h2>
-        <div class="tagline">Your guide to the federal landscape.</div>
-        <p>The defense market has its own rules, its own language, and its own pace. We help companies understand the terrain — from procurement vehicles and compliance frameworks to the unwritten norms that determine whether a technology gets adopted or shelved.</p>
+        <h2>Federal Market Entry</h2>
+        <div class="tagline">Federal revenue for commercial companies.</div>
+        <p>Plenty of established commercial companies already do work the government buys, but have never won it directly. I run the capture work for them: finding the right opportunities, saying no to the wrong ones, and writing responses that match what the government asked for.</p>
       </div>
       <div class="service-details">
         <div class="detail-card">
-          <h4>Market Landscape Analysis</h4>
-          <p>Map the competitive environment, identify whitespace opportunities, and understand where your solution fits within the existing ecosystem of programs and contracts.</p>
+          <h4>Opportunity Triage</h4>
+          <p>Screen SAM.gov and agency forecasts for work you can actually win, on fit, set-aside and size, and pass on the rest early.</p>
         </div>
         <div class="detail-card">
-          <h4>Procurement Navigation</h4>
-          <p>Demystify SBIR/STTR, OTAs, GWACs, and other vehicles — helping you choose the right path to get your technology in front of the right buyers.</p>
+          <h4>RFI and Sources Sought</h4>
+          <p>Responses that shape the requirement and put your company on the contracting officer's list before the RFP drops.</p>
         </div>
         <div class="detail-card">
-          <h4>Compliance Readiness</h4>
-          <p>Understand the compliance landscape — from FedRAMP to security certifications — and develop a practical path toward meeting the requirements that matter for your target contracts.</p>
+          <h4>Proposals</h4>
+          <p>Compliant, evaluator-ready proposals built from your real past performance and verified facts.</p>
         </div>
         <div class="detail-card">
-          <h4>Stakeholder Engagement</h4>
-          <p>Build relationships with the program managers, end users, and decision-makers who matter — through targeted engagement strategies grounded in understanding of the customer's priorities.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- SERVICE 3: Systems Integration -->
-    <div class="service-block">
-      <div class="service-header">
-        <div class="service-num">03</div>
-        <h2>Systems Integration</h2>
-        <div class="tagline">The right team for the technical challenge.</div>
-        <p>Federal environments run on a patchwork of legacy and modern systems. We manage integration efforts by assembling and coordinating the right technical specialists — ensuring solutions work within the constraints of real-world government IT while keeping projects on track and on mission.</p>
-      </div>
-      <div class="service-details">
-        <div class="detail-card">
-          <h4>Requirements & Architecture Planning</h4>
-          <p>Work with your team and ours to assess existing system landscapes, define integration requirements, and develop an architecture that aligns with agency modernization priorities.</p>
-        </div>
-        <div class="detail-card">
-          <h4>Technical Team Coordination</h4>
-          <p>Assemble and manage the right engineering talent for the specific integration challenge — whether that's bridging legacy infrastructure, API development, or data migration.</p>
-        </div>
-        <div class="detail-card">
-          <h4>Technical Positioning</h4>
-          <p>Help your team articulate integration capabilities in the language of federal acquisitions — aligning technical strengths with program requirements.</p>
-        </div>
-        <div class="detail-card">
-          <h4>Deployment Oversight</h4>
-          <p>Manage the transition from proof-of-concept to production — coordinating across security frameworks, stakeholder reviews, and operational readiness milestones.</p>
+          <h4>Teaming</h4>
+          <p>Find the primes and subcontractors that fill your gaps, and set up the relationship before the solicitation does.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ENGAGEMENT MODEL -->
-<section class="section section-dark">
-  <div class="section-inner" style="text-align:center;">
-    <div style="font-size:11px; font-weight:700; color:var(--accent); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:16px;">How We Engage</div>
-    <h2 style="font-family:'DM Serif Display',serif; font-size:clamp(32px,4vw,40px); font-weight:400; color:var(--text-primary); margin-bottom:16px;">Flexible Models, Tangible Outcomes</h2>
-    <p style="font-size:16px; color:var(--text-secondary); max-width:560px; margin:0 auto;">We structure engagements around your needs — not ours. Every model is built to deliver measurable progress.</p>
-    <div class="engage-grid">
-      <div class="engage-card">
-        <div class="engage-icon">📋</div>
-        <h3>Strategic Assessment</h3>
-        <p>A focused, time-bound evaluation of your federal market position, competitive landscape, and recommended next steps. Delivered as a written roadmap.</p>
-      </div>
-      <div class="engage-card">
-        <div class="engage-icon">🔄</div>
-        <h3>Ongoing Advisory</h3>
-        <p>Embedded strategic support on a recurring basis — regular touchpoints, real-time guidance, and active support on pursuits and positioning.</p>
-      </div>
-      <div class="engage-card">
-        <div class="engage-icon">🎯</div>
-        <h3>Project-Based</h3>
-        <p>Defined scope, defined deliverables. Ideal for specific objectives like market entry plans, compliance readiness, or competitive analyses.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
 <section class="cta-banner">
-  <h2>Let's Scope Your Engagement</h2>
-  <p>Tell us where you are and where you want to go. We'll design an approach that fits.</p>
-  <a href="contact.html" class="btn-primary">Start a Conversation →</a>
+  <h2>Let's Scope It</h2>
+  <p>Tell me where the company is and what is breaking. I'll tell you whether I can help.</p>
+  <a href="contact.html" class="btn-primary">Start a Conversation &rarr;</a>
 </section>
 
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="logo"><img src="logo-dark.svg" alt="Statera Solutions" class="logo-img"></div>
-      <p>Strategic advisory at the intersection of technology and national security.</p>
+      <p>Operating systems for technical founders. Federal market entry for commercial companies.</p>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
-      <a href="services.html">Startup Advisory</a>
-      <a href="services.html">Defense Tech Consulting</a>
-      <a href="services.html">Systems Integration</a>
+      <a href="services.html#spine">Founder's Operating Spine</a>
+      <a href="services.html#federal">Federal Market Entry</a>
     </div>
     <div class="footer-col">
       <h5>Company</h5>
-      <a href="about.html">About Us</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="https://www.linkedin.com/company/statera-solutions" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/statera-solutions" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="footer-col">
       <h5>Contact</h5>
@@ -340,8 +323,8 @@ footer { padding:60px 40px 40px; border-top:1px solid var(--border); }
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 Statera Solutions LLC. All rights reserved.</span>
-    <span>Privacy Policy &middot; Terms of Service</span>
+    <span>&copy; 2026 Statera Solutions LLC</span>
+    <span class="fed-ids">SDVOSB &nbsp;&middot;&nbsp; UEI LKY3Q1VU5SJ3 &nbsp;&middot;&nbsp; CAGE 9FHP3</span>
   </div>
 </footer>
 

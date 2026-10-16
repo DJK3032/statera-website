@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Statera Solutions — Strategic Advisory for Defense Technology</title>
-<meta name="description" content="Statera Solutions partners with technology companies to navigate the federal defense and intelligence market — from strategy through execution.">
-<meta property="og:title" content="Statera Solutions — Strategic Advisory for Defense Technology">
-<meta property="og:description" content="Strategic advisory for technology companies entering and growing within the federal defense market.">
+<title>Statera Solutions | From Product to Company</title>
+<meta name="description" content="Statera Solutions builds the operating spine for technical founders in three to six months, then hands it to an operator you keep. Federal market entry for commercial companies.">
+<meta property="og:title" content="Statera Solutions | From Product to Company">
+<meta property="og:description" content="Statera Solutions builds the operating spine for technical founders in three to six months, then hands it to an operator you keep. Federal market entry for commercial companies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://staterasolutions.us">
 <meta name="twitter:card" content="summary">
@@ -183,7 +183,7 @@ nav {
 }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
-/* Hero right — metric cards */
+/* Hero right: metric cards */
 .hero-visual {
   display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
 }
@@ -461,134 +461,144 @@ footer {
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
 }
+
+/* ===== 2026-10 refresh ===== */
+.services-grid.two { grid-template-columns: repeat(2, 1fr); }
+.svc-num { font-family:'DM Serif Display',serif; font-size:30px; color:var(--accent); margin-bottom:18px; line-height:1; }
+.cred-line { font-size:14px; color:var(--text-muted); margin-top:-12px; margin-bottom:36px; max-width:540px; line-height:1.7; }
+.metric-number.sm { font-size:34px; }
+.phase-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:28px; }
+.phase { padding:28px; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; }
+.phase .k { font-size:11px; font-weight:700; color:var(--accent); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:10px; }
+.phase h4 { font-size:17px; font-weight:600; color:var(--text-primary); margin-bottom:8px; }
+.phase p { font-size:14px; color:var(--text-secondary); line-height:1.7; }
+.service-header p + p { margin-top:14px; }
+.note { font-size:15px; color:var(--text-secondary); margin-top:24px; }
+.bio p { font-size:16px; color:var(--text-secondary); line-height:1.85; margin-bottom:18px; }
+.cred-list { list-style:none; display:flex; flex-direction:column; gap:14px; }
+.cred-list li { padding:18px 22px; background:var(--bg-card); border:1px solid var(--border); border-radius:10px; font-size:14px; color:var(--text-secondary); line-height:1.6; }
+.cred-list li b { display:block; color:var(--text-primary); font-weight:600; font-size:15px; margin-bottom:2px; }
+.method-icon svg { width:20px; height:20px; stroke:var(--accent); fill:none; stroke-width:1.6; }
+.fed-ids { font-size:12px; color:var(--text-muted); letter-spacing:0.04em; }
+@media (max-width: 900px) {
+  .services-grid.two, .phase-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
 
-<!-- ===== NAVIGATION ===== -->
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <img src="logo-dark.svg" alt="Statera Solutions" class="logo-img">
-    </a>
+    <a href="index.html" class="logo"><img src="logo-dark.svg" alt="Statera Solutions" class="logo-img"></a>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="about.html">About</a>
       <a href="contact.html" class="nav-cta">Get in Touch</a>
     </div>
   </div>
 </nav>
 
-<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-content">
-      <div class="hero-tag">Defense & Technology Advisory</div>
-      <h1>Navigate the Federal Market with <em>Confidence</em></h1>
-      <p>Statera Solutions partners with technology companies at all phases of growth to bridge the gap between commercial innovation and federal adoption — from strategy through execution.</p>
+      <div class="hero-tag">Operations for technical founders</div>
+      <h1>From product <em>to company.</em></h1>
+      <p>I build the operating spine for technical founders in three to six months, then hand it to an operator you keep. For commercial companies entering the federal market, I run the capture and proposal work that gets you to award.</p>
+      <div class="cred-line">Former COO, Armaments Research Company. Emerging hardware operations, Apple. Nine years an Army Infantry and Special Forces officer. West Point, MIT Sloan, Harvard Kennedy School, Johns Hopkins.</div>
       <div class="hero-actions">
-        <a href="contact.html" class="btn-primary">Start a Conversation →</a>
-        <a href="services.html" class="btn-secondary">Our Services</a>
+        <a href="contact.html" class="btn-primary">Start a Conversation &rarr;</a>
+        <a href="services.html" class="btn-secondary">How It Works</a>
       </div>
     </div>
     <div class="hero-visual">
       <div class="metric-card" style="grid-column: span 2;">
-        <div class="metric-number">20+</div>
-        <div class="metric-label">Years of combined experience across defense, intelligence & technology</div>
+        <div class="metric-number">3 to 6 months</div>
+        <div class="metric-label">Fixed term. The handoff is the deliverable.</div>
       </div>
       <div class="metric-card">
-        <div class="metric-number">DoD</div>
-        <div class="metric-label">Deep domain expertise in defense systems</div>
+        <div class="metric-number">6</div>
+        <div class="metric-label">Operating systems, scoped to what your company needs</div>
       </div>
       <div class="metric-card">
-        <div class="metric-number">IC</div>
-        <div class="metric-label">Intelligence community integration</div>
+        <div class="metric-number sm">Fixed fee</div>
+        <div class="metric-label">Priced on the outcome, not on hours</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== TRUST BAR ===== -->
 <section class="trust-bar">
   <div class="trust-inner">
-    <div class="trust-label">Domains We Operate In</div>
+    <div class="trust-label">Where I have done the work</div>
     <div class="trust-items">
-      <span class="trust-item"><span class="trust-dot"></span>Department of Defense</span>
-      <span class="trust-item"><span class="trust-dot"></span>Intelligence Community</span>
-      <span class="trust-item"><span class="trust-dot"></span>Federal Civilian Agencies</span>
-      <span class="trust-item"><span class="trust-dot"></span>Defense Industrial Base</span>
+      <span class="trust-item"><span class="trust-dot"></span>Armaments Research Company</span>
+      <span class="trust-item"><span class="trust-dot"></span>Apple</span>
+      <span class="trust-item"><span class="trust-dot"></span>U.S. Army Special Forces</span>
+      <span class="trust-item"><span class="trust-dot"></span>White House Fellows</span>
     </div>
   </div>
 </section>
 
-<!-- ===== SERVICES PREVIEW ===== -->
 <section class="section">
   <div class="section-inner">
-    <div class="section-label">What We Do</div>
-    <div class="section-title">Advisory Services Built for<br>the Defense Technology Landscape</div>
-    <div class="section-subtitle">We bring operational insight and strategic clarity to technology companies working at the intersection of innovation and national security.</div>
-    <div class="services-grid">
+    <div class="section-label">What I Do</div>
+    <div class="section-title">Two Ways I Work</div>
+    <div class="section-subtitle">Both are fixed in scope, and both end with something your team owns.</div>
+    <div class="services-grid two">
       <div class="service-card">
-        <div class="service-icon">🚀</div>
-        <h3>Startup Advisory</h3>
-        <p>Equipping emerging technology companies with the strategy, connections, and market intelligence needed to break into and grow within the federal sector.</p>
-        <a href="services.html" class="service-link">Learn more →</a>
+        <div class="svc-num">01</div>
+        <h3>Founder's Operating Spine</h3>
+        <p>For seed to Series A companies with a technical founder, real traction and no operator. I build finance, people, planning, compliance and systems, hire and train the junior operator who will run them, and leave.</p>
+        <a href="services.html#spine" class="service-link">How it works &rarr;</a>
       </div>
       <div class="service-card">
-        <div class="service-icon">🛡️</div>
-        <h3>Defense Technology Consulting</h3>
-        <p>Guiding technology companies through the nuances of federal procurement, compliance, and operational deployment within defense environments.</p>
-        <a href="services.html" class="service-link">Learn more →</a>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">⚙️</div>
-        <h3>Systems Integration</h3>
-        <p>Coordinating the right technical talent to unify disparate platforms into cohesive, interoperable systems — reducing friction and accelerating mission delivery.</p>
-        <a href="services.html" class="service-link">Learn more →</a>
+        <div class="svc-num">02</div>
+        <h3>Federal Market Entry</h3>
+        <p>For established commercial companies that want federal revenue. I find the opportunities you can win, write the RFI and proposal responses, and line up the teaming partners.</p>
+        <a href="services.html#federal" class="service-link">How it works &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== WHY STATERA ===== -->
 <section class="section why-section">
   <div class="section-inner">
     <div class="why-grid">
       <div>
         <div class="section-label">Why Statera</div>
-        <div class="section-title">Built on Operational Experience, Not Theory</div>
+        <div class="section-title">Cheap to Do Early. Ruinous to Do Late.</div>
         <p style="font-size:16px; color: var(--text-secondary); line-height:1.8; margin-top: 16px;">
-          Our advisory approach is grounded in years of hands-on work across the defense and intelligence communities. We don't just advise — we've built, integrated, and delivered within these environments.
+          Accounting that can't pass a DCAA review. A payroll tool the company outgrows at 20 people. A facility clearance started after the contract needs it. These are the founder's blind spots, and each one costs months to fix later. I build them right the first time.
         </p>
       </div>
       <div class="why-list">
         <div class="why-item">
           <div class="why-num">01</div>
           <div>
-            <h4>Operator Perspective</h4>
-            <p>Our team has served in roles across DoD and the IC — we understand the mission from the inside out.</p>
+            <h4>I have run the company</h4>
+            <p>As COO I managed the P&amp;L of a defense technology company doing about $10 million a year, and led its hiring.</p>
           </div>
         </div>
         <div class="why-item">
           <div class="why-num">02</div>
           <div>
-            <h4>Startup-Fluent</h4>
-            <p>We speak both languages — the fast-moving world of tech innovation and the structured environment of federal procurement.</p>
+            <h4>Fixed term, not a treadmill</h4>
+            <p>Every engagement ends with a trained operator in the seat. You are not renting me indefinitely.</p>
           </div>
         </div>
         <div class="why-item">
           <div class="why-num">03</div>
           <div>
-            <h4>Outcome-Driven</h4>
-            <p>Engagements are scoped around tangible milestones — not billable hours. We succeed when you do.</p>
+            <h4>Defense-fluent</h4>
+            <p>DCAA-ready accounting, facility clearances, DD 254s, OTAs and SBIRs are part of the build, not an afterthought.</p>
           </div>
         </div>
         <div class="why-item">
           <div class="why-num">04</div>
           <div>
-            <h4>Trusted Network</h4>
-            <p>Access to a curated network of decision-makers, integrators, and operators across the defense ecosystem.</p>
+            <h4>Candor over comfort</h4>
+            <p>You get a straight read on what is broken and what to fix first.</p>
           </div>
         </div>
       </div>
@@ -596,33 +606,28 @@ footer {
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
 <section class="cta-banner">
-  <h2>Ready to Accelerate Your Federal Strategy?</h2>
-  <p>Whether you're entering the defense market or scaling an existing presence, we'd like to hear from you.</p>
-  <a href="contact.html" class="btn-primary">Schedule a Conversation →</a>
+  <h2>Shipping Product but Missing Deadlines?</h2>
+  <p>If the team builds well but the company around it is held together by the founder, let's talk.</p>
+  <a href="contact.html" class="btn-primary">Start a Conversation &rarr;</a>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="logo">
-        <img src="logo-dark.svg" alt="Statera Solutions" class="logo-img">
-      </div>
-      <p>Strategic advisory at the intersection of technology and national security.</p>
+      <div class="logo"><img src="logo-dark.svg" alt="Statera Solutions" class="logo-img"></div>
+      <p>Operating systems for technical founders. Federal market entry for commercial companies.</p>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
-      <a href="services.html">Startup Advisory</a>
-      <a href="services.html">Defense Tech Consulting</a>
-      <a href="services.html">Systems Integration</a>
+      <a href="services.html#spine">Founder's Operating Spine</a>
+      <a href="services.html#federal">Federal Market Entry</a>
     </div>
     <div class="footer-col">
       <h5>Company</h5>
-      <a href="about.html">About Us</a>
+      <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="https://www.linkedin.com/company/statera-solutions" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/company/statera-solutions" target="_blank" rel="noopener">LinkedIn</a>
     </div>
     <div class="footer-col">
       <h5>Contact</h5>
@@ -631,8 +636,8 @@ footer {
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2026 Statera Solutions LLC. All rights reserved.</span>
-    <span>Privacy Policy &nbsp;&middot;&nbsp; Terms of Service</span>
+    <span>&copy; 2026 Statera Solutions LLC</span>
+    <span class="fed-ids">SDVOSB &nbsp;&middot;&nbsp; UEI LKY3Q1VU5SJ3 &nbsp;&middot;&nbsp; CAGE 9FHP3</span>
   </div>
 </footer>
 
